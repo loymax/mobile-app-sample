@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="MobileAppSample.loymax.dev" android:versionCode="1" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+	<application android:theme="@style/AppTheme.Main" android:usesCleartextTraffic="true" android:label="MobileAppSample" android:icon="@mipmap/ic_launcher">
+		<uses-library android:name="org.apache.http.legacy" android:required="false" />
+		<provider android:name="android.support.v4.content.FileProvider" android:authorities="MobileAppSample.loymax.dev.fileprovider" android:exported="false" android:grantUriPermissions="true">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
+		</provider>
+	</application>
+</manifest>

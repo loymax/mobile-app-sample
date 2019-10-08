@@ -1,0 +1,89 @@
+Configs: &Default
+  Version: 2
+  AppName: MobileAppSample
+  AgreementSettings:
+    Content: offer.html
+  ServerSettings:
+    VerifyPhoneCodeLength: 6
+    ForceDisableInputSocial: False
+  Analytics:
+    Google: 
+      Enable: false
+      TrackerId:
+        Android: 
+        Ios: 
+      Interval:
+        Android: 5
+        Ios: 5
+  CachePolicyEnabled: False
+  CaptchaSettings:
+    BaseUrl: http://localhost
+    SiteKey:
+      Ios: "6LdxdXAUAAAAAP2s6x21Wr0CWfsYVDzddgHPxcHl"
+      Android: "6Lco4XAUAAAAAMm_wZt1953xjtB8dwz7a4-H_Wkt"
+  ResendCodeConfirmTime: 15 #Время ожидания для повторной отправки кода подтверждения (секунды)
+  AnonymVirtualCard: True #Виртуальная карта для анонима 
+  ShowOptions:
+    ProfileCardViewModel: All #Отображать в меню "Моя карта" All or OnlyAuth
+    PersonalOffersViewModel: OnlyAuth #Отображать в меню "Персональные акции" OnlyAuth or Never
+    PersonalGoodsViewModel: OnlyAuth #Отображать в меню "Любимые товары" OnlyAuth or Never
+
+Development:
+  <<: *Default
+  LoymaxEndpoint: 
+    AppUrl: http://public.release.iis.local/api
+    ClientId: ""
+    PublicKey: ""
+    OfferId: "required"
+    PrivacyId: "required"
+  HockeyApp: 
+    AppKey:
+      Android: False
+      Ios: False
+    EnableCrashManager: False
+    EnableUpdateManager: False
+    EnableFeedBackManager: False
+  PushNotification: 
+    Enable: False
+    ProjectNumber:
+      Android: ""
+
+Staging:
+  <<: *Default
+  LoymaxEndpoint: 
+    AppUrl: https://public-demo.loymax.net/api
+    ClientId: ""
+    PublicKey: ""
+    OfferId: "required"
+    PrivacyId: "required"
+  HockeyApp:
+    AppKey:
+      Android: "required"
+      Ios: "required"
+    EnableCrashManager: True
+    EnableUpdateManager: True
+    EnableFeedBackManager: False
+  PushNotification: 
+    Enable: False
+    ProjectNumber:
+      Android: ""
+
+Production:
+  <<: *Default
+  LoymaxEndpoint:
+    AppUrl: 
+    ClientId: ""
+    PublicKey: ""
+    OfferId: "required"
+    PrivacyId: "required"
+  HockeyApp: 
+    AppKey:
+      Android: "required"
+      Ios: "required"
+    EnableCrashManager: True
+    EnableUpdateManager: False
+    EnableFeedBackManager: False
+  PushNotification: 
+    Enable: False
+    ProjectNumber:
+      Android: ""
