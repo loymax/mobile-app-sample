@@ -11,7 +11,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/LoymaxSolutions/mobile-app-sample">
+  <a href="https://github.com/loymax/mobile-app-sample">
     <img src="Images/logo.png" alt="Logo" width="160" height="57">
   </a>
 
@@ -20,14 +20,14 @@
   <p align="center">
     MobileAppSample – это стандартное приложение сгенерированное конструктором мобильных приложений компании Loymax.
     <br />
-    <a href="https://github.com/LoymaxSolutions/mobile-app-sample"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/loymax/mobile-app-sample"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/LoymaxSolutions/mobile-app-sample">View Demo</a>
+    <a href="https://github.com/loymax/mobile-app-sample">View Demo</a>
     ·
-    <a href="https://github.com/LoymaxSolutions/mobile-app-sample/issues">Report Bug</a>
+    <a href="https://github.com/loymax/mobile-app-sample/issues">Report Bug</a>
     ·
-    <a href="https://github.com/LoymaxSolutions/mobile-app-sample/issues">Request Feature</a>
+    <a href="https://github.com/loymax/mobile-app-sample/issues">Request Feature</a>
   </p>
 </p>
 
@@ -45,7 +45,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot-1]]
+![Product Name Screen Shot][product-screenshot-1]
  <p align="center">
     MobileAppSample – мобильных приложений компании Loymax.
  </p>
@@ -56,7 +56,6 @@
 Для запуска локальной копии выполните следующие простые шаги.
 
 ### Installation
-
 Для корректной работы приложения на платформе Android необходимо установить ключ 
 ```JS
 const com.google.android.maps.v2.API_KEY;
@@ -64,13 +63,20 @@ const com.google.android.maps.v2.API_KEY;
 1. Получить ключ [Link](https://developers.google.com/maps/documentation/android-sdk/get-api-key)
 2. Полученный ключ необходимо разместить в поле Value :
 ```sh
-MobileAppSample.Droid -> Properties -> AssemblyInfo.cs -> 
+MobileAppSample.Droid \ Properties \ AssemblyInfo.cs  
 [assembly: MetaData("com.google.android.maps.v2.API_KEY", Value = "")] 
 ```
-3. Указать источник Nuget
+
+Если не удалось востановить NuGet пакеты, укажите источник NuGet вручную.
 ```sh
 https://nuget.loymax.net/nuget 
 ```
+
+
+ПО Visual Studio 2019 Windows или Visual Studio for Mac 2019. 
+* Xamarin - 16.3.0.274
+* Xamarin.Android SDK - 10.0.0.43
+* Xamarin.iOS SDK - 13.2.0.42
 
 <!-- LICENSE -->
 ## License
@@ -85,5 +91,5 @@ Distributed under the Apache 2.0 License. See `LICENSE` for more information.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [license-shield]: https://img.shields.io/badge/License-Apache%202.0-blue.svg
-[license-url]: https://github.com/LoymaxSolutions/mobile-app-sample/blob/master/LICENSE
+[license-url]: https://github.com/loymax/mobile-app-sample/blob/master/LICENSE
 [product-screenshot-1]: Images/screenshot1.png
