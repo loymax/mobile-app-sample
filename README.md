@@ -72,6 +72,17 @@ MobileAppSample.Droid \ Properties \ AssemblyInfo.cs
 https://nuget.loymax.net/nuget 
 ```
 
+Mobile App Sample поддерживает App center, для подключение которого необходимо:
+
+1. Получить AppKey на [App Center](https://appcenter.ms) для Android и iOS
+2. Добавить AppKey в место "required" для Android и iOS соответственно.
+```sh
+MobileAppSample.Core \ Config.yaml
+HockeyApp: 
+  AppKey:
+    Android: "required"
+    Ios: "required"
+```
 
 ПО Visual Studio 2019 Windows или Visual Studio for Mac 2019. 
 * Xamarin - 16.3.0.274

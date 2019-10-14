@@ -22,16 +22,16 @@ Configs: &Default
       Ios: "6LdxdXAUAAAAAP2s6x21Wr0CWfsYVDzddgHPxcHl"
       Android: "6Lco4XAUAAAAAMm_wZt1953xjtB8dwz7a4-H_Wkt"
   ResendCodeConfirmTime: 15 #Время ожидания для повторной отправки кода подтверждения (секунды)
-  AnonymVirtualCard: True #Виртуальная карта для анонима 
+  AnonymVirtualCard: False #Виртуальная карта для анонима 
   ShowOptions:
-    ProfileCardViewModel: All #Отображать в меню "Моя карта" All or OnlyAuth
+    ProfileCardViewModel: OnlyAuth #Отображать в меню "Моя карта" All or OnlyAuth
     PersonalOffersViewModel: OnlyAuth #Отображать в меню "Персональные акции" OnlyAuth or Never
     PersonalGoodsViewModel: OnlyAuth #Отображать в меню "Любимые товары" OnlyAuth or Never
 
 Development:
   <<: *Default
   LoymaxEndpoint: 
-    AppUrl: http://public.release.iis.local/api
+    AppUrl: https://api-demo.loymax.tech/
     ClientId: ""
     PublicKey: ""
     OfferId: "required"
@@ -42,7 +42,6 @@ Development:
       Ios: False
     EnableCrashManager: False
     EnableUpdateManager: False
-    EnableFeedBackManager: False
   PushNotification: 
     Enable: False
     ProjectNumber:
@@ -51,7 +50,7 @@ Development:
 Staging:
   <<: *Default
   LoymaxEndpoint: 
-    AppUrl: https://public-demo.loymax.net/api
+    AppUrl: https://api-demo.loymax.tech/
     ClientId: ""
     PublicKey: ""
     OfferId: "required"
@@ -62,7 +61,6 @@ Staging:
       Ios: "required"
     EnableCrashManager: True
     EnableUpdateManager: True
-    EnableFeedBackManager: False
   PushNotification: 
     Enable: False
     ProjectNumber:
@@ -71,7 +69,7 @@ Staging:
 Production:
   <<: *Default
   LoymaxEndpoint:
-    AppUrl: 
+    AppUrl: https://api-demo.loymax.tech/
     ClientId: ""
     PublicKey: ""
     OfferId: "required"
@@ -82,7 +80,6 @@ Production:
       Ios: "required"
     EnableCrashManager: True
     EnableUpdateManager: False
-    EnableFeedBackManager: False
   PushNotification: 
     Enable: False
     ProjectNumber:
