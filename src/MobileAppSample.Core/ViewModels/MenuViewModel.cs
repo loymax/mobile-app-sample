@@ -14,8 +14,12 @@
 
 namespace MobileAppSample.Core.ViewModels
 {
+    using System.Collections.Generic;
+    using Loymax.Core;
     using Loymax.Core.Services.Interfaces;
     using Loymax.Core.ViewModels.Base;
+    using Loymax.Core.ViewModels.Elements;
+    using MvvmCross.Commands;
     using MvvmCross.Plugin.Messenger;
 
     public class MenuViewModel : BaseMenuViewModel
@@ -23,5 +27,24 @@ namespace MobileAppSample.Core.ViewModels
         public MenuViewModel(IMvxMessenger messenger, ICurrentUserContext userContext) : base(messenger, userContext)
         {
         }
+
+        //TODO NewModule
+        /*
+        protected override IList<MenuCellElement> GetCurrentItems()
+        {
+            var items = base.GetCurrentItems();
+            items?.Add(NewCellElement);
+
+            return items;
+        }
+
+        private MenuCellElement NewCellElement => new MenuCellElement
+        {
+            Text = Localize.GetText("NewViewModel.Title"),
+            ImageModel = "ic_menu_new",
+            Command = new MvxAsyncCommand(ShowMenuItem<NewViewModel>)
+        };
+        */
     }
 }
+ 

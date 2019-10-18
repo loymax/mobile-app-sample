@@ -130,6 +130,10 @@
     <Compile Include="Setup.cs" />
     <Compile Include="ThemeManager.cs" />
     <Compile Include="Views\MenuView.cs" />
+    <Compile Include="Views\NewView.cs" />
+    <Compile Include="Views\NewView.designer.cs">
+      <DependentUpon>NewView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -755,9 +759,12 @@
     <ImageAsset Include="Assets.xcassets\ic_menu_about.imageset\ic_menu_about%402x.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\app_icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\app_icon.imageset\ItunesArtwork%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\app_icon.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MobileAppSample.Core\MobileAppSample.Core.csproj">
@@ -847,6 +854,9 @@
     <PackageReference Include="Xamarin.Google.iOS.Analytics">
       <Version>3.17.0.3</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Views\NewView.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="../packages/Fody.3.0.3/build/Fody.targets" Condition="Exists('../packages/Fody.3.0.3/build/Fody.targets')" />
