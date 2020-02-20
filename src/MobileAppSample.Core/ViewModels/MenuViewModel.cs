@@ -16,6 +16,7 @@ namespace MobileAppSample.Core.ViewModels
 {
     using System.Collections.Generic;
     using Loymax.Core;
+    using Loymax.Core.Providers.Interfaces;
     using Loymax.Core.Services.Interfaces;
     using Loymax.Core.ViewModels.Base;
     using Loymax.Core.ViewModels.Elements;
@@ -24,7 +25,7 @@ namespace MobileAppSample.Core.ViewModels
 
     public class MenuViewModel : BaseMenuViewModel
     {
-        public MenuViewModel(IMvxMessenger messenger, ICurrentUserContext userContext) : base(messenger, userContext)
+        public MenuViewModel(IMvxMessenger messenger, ICurrentUserContext userContext, ILocalizationProvider localizationProvider) : base(messenger, userContext, localizationProvider)
         {
         }
 

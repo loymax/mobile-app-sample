@@ -1,0 +1,16 @@
+Order:
+  - SignInViewModel.Title
+  - ProfileCardViewModel.Title
+  - OffersViewModel.Title
+  - PersonalOffersViewModel.Title
+  - PersonalGoods.Title
+  - ShoppingBasketsViewModel.Title
+  - CouponsViewModel.Title
+  - MyCouponsViewModel.Title
+  - BaseMerchantsViewModel.Title
+  - PurchaseHistoryViewModel.Title
+  - NotificationsViewModel.Title
+  - ProfileViewModel.Title
+  - SupportService.Title 
+  - AboutApp.Title
+  - Pdf.Title

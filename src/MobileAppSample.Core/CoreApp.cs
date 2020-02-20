@@ -16,19 +16,37 @@ namespace MobileAppSample.Core
 {
     using System;
     using Loymax.Core;
+    using Loymax.Core.LocalStorage;
     using Loymax.Core.Modules;
+    using Loymax.Core.Settings;
     using Loymax.Core.Settings.Client;
+    using Loymax.Core.ViewModels.Screens;
+    using MvvmCross;
 
     public class CoreApp : App
     {
-        public override Type MainViewModelType => typeof(Loymax.Module.Offers.ViewModels.OffersViewModel);
+        private ILocalStorage _localStorage;
+        protected ILocalStorage LocalStorage => _localStorage ?? (_localStorage = Mvx.IoCProvider.Resolve<ILocalStorage>());
+
+        public override Type MainViewModelType
+        {
+            get
+            {
+                var isFirstLaunch = LocalStorage.GetValueOrDefault(LocalizationViewModel.KEY, true);
+                if ((AppSettings.Current.Environment?.Localization?.Enable ?? false)
+                    && (AppSettings.Current.Environment?.Localization?.ViewLocalization ?? false)
+                    && isFirstLaunch)
+                    return typeof(LocalizationViewModel);
+                return typeof(Loymax.Module.Offers.ViewModels.OffersViewModel);
+            }
+        }
+
 
         protected override IClientEnvironmentSettings CreateClientSettings()
         {
             return new ClientEnvironmentSettings(typeof(CoreApp).Assembly,
 #if DEBUG
                 BuildEnvironmentType.Development
-
 #elif ADHOC
                 BuildEnvironmentType.Staging
 #else

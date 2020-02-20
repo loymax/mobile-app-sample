@@ -27,11 +27,14 @@ Configs: &Default
     ProfileCardViewModel: OnlyAuth #Отображать в меню "Моя карта" All or OnlyAuth
     PersonalOffersViewModel: OnlyAuth #Отображать в меню "Персональные акции" OnlyAuth or Never
     PersonalGoodsViewModel: OnlyAuth #Отображать в меню "Любимые товары" OnlyAuth or Never
+  Localization:
+    Enable: True #Подключение локализации
+    ViewLocalization: True #Отображение стартового экрана с выбором языка при первом запуске приложения
 
 Development:
   <<: *Default
   LoymaxEndpoint: 
-    AppUrl: https://api-demo.loymax.tech/
+    AppUrl: https://demo.loymax.tech/publicapi/
     ClientId: ""
     PublicKey: ""
     OfferId: "required"
@@ -50,7 +53,7 @@ Development:
 Staging:
   <<: *Default
   LoymaxEndpoint: 
-    AppUrl: https://api-demo.loymax.tech/
+    AppUrl: https://demo.loymax.tech/publicapi/
     ClientId: ""
     PublicKey: ""
     OfferId: "required"
@@ -69,7 +72,7 @@ Staging:
 Production:
   <<: *Default
   LoymaxEndpoint:
-    AppUrl: https://api-demo.loymax.tech/
+    AppUrl: https://demo.loymax.tech/publicapi/
     ClientId: ""
     PublicKey: ""
     OfferId: "required"

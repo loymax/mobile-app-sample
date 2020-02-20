@@ -17,7 +17,10 @@ namespace MobileAppSample.Droid
     using Loymax.Core;
     using Loymax.Core.Droid;
     using Loymax.Core.Modules;
+    using Loymax.Core.Providers.Interfaces;
     using MobileAppSample.Core;
+    using MvvmCross;
+    using System.Globalization;
 
     [Android.Runtime.Preserve(AllMembers = true)]
     public class Setup : BaseDroidSetup
@@ -41,6 +44,14 @@ namespace MobileAppSample.Droid
             registry.Register<Loymax.Module.Profile.Droid.ProfileDroidModule>();
             registry.Register<Loymax.Module.SupportService.Droid.SupportServiceDroidModule>();
             registry.Register<Loymax.Module.AboutApp.Droid.AboutAppDroidModule>();
+        }
+
+        protected override CultureInfo CurrentCultureInfo()
+        {
+            if (Mvx.IoCProvider.TryResolve(out ILocalizationProvider localization))
+                return localization.CurrentCultureInfo;
+
+            return CultureInfo.CurrentCulture;
         }
     }
 }

@@ -26,6 +26,9 @@ namespace MobileAppSample.iOS
     using MobileAppSample.Core;
     using MvvmCross.Platforms.Ios.Core;
     using MvvmCross.Platforms.Ios.Presenters;
+    using System.Globalization;
+    using Loymax.Core.Providers.Interfaces;
+    using MvvmCross;
 
     public class Setup : BaseIosSetup
     {
@@ -66,6 +69,14 @@ namespace MobileAppSample.iOS
             LxThemeManager.Init(this.Window, settings);
 
             return LxThemeManager.Instance;
+        }
+
+        protected override CultureInfo CurrentCultureInfo()
+        {
+            if (Mvx.IoCProvider.TryResolve(out ILocalizationProvider localization))
+                return localization.CurrentCultureInfo;
+
+            return CultureInfo.CurrentCulture;
         }
 
         protected override void AddPlatformModules(ILxLoaderModuleRegistry registry)

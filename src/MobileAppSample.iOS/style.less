@@ -32,6 +32,19 @@ cardViewLayer() {
     masks-to-bounds: true;
 }
 
+btnViewLayer() {
+    corner-radius: @primaryBorderRadius;
+    masks-to-bounds: true;
+    border-width: 1;
+    border-color: #4D4D4D;
+}
+
+btnViewLayerSelected() {
+    corner-radius: @primaryBorderRadius;
+    masks-to-bounds: true;
+    border-width: 1;
+    border-color: @tintColor;
+}
 // colors
 
 Colors {
@@ -343,4 +356,15 @@ lmx_PurchaseHistoryTableViewCell_CardView {
 
 lmx_PurchaseHistoryTableViewCell_AddressIcon {
     image: ic_pin_map;
+}
+
+//localization
+lmx_LocalizationViewCell_LanguageButton {
+    layer: btnViewLayer();
+    background-color: @barButtonTintColor;
+}
+
+lmx_LocalizationViewCell_Selected_LanguageButton {
+    layer: btnViewLayerSelected();
+    background-color: @tintColor;
 }
