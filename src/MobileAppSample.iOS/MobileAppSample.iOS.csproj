@@ -765,10 +765,21 @@
     <ImageAsset Include="Assets.xcassets\app_icon.imageset\ItunesArtwork%402x.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_arrow_right.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_arrow_right.imageset\ic_arrow_right%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_arrow_right.imageset\ic_arrow_right%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_menu_language.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_menu_language.imageset\ic_menu_language%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_menu_language.imageset\ic_menu_language%402x.png" />
+    <ImageAsset Include="Assets.xcassets\im_language.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\im_language.imageset\im_language.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\app_icon.imageset\" />
     <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\ic_arrow_right.imageset\" />
+    <Folder Include="Assets.xcassets\ic_menu_language.imageset\" />
+    <Folder Include="Assets.xcassets\im_language.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MobileAppSample.Core\MobileAppSample.Core.csproj">
