@@ -27,6 +27,9 @@ Configs: &Default
     ProfileCardViewModel: OnlyAuth #Отображать в меню "Моя карта" All or OnlyAuth
     PersonalOffersViewModel: OnlyAuth #Отображать в меню "Персональные акции" OnlyAuth or Never
     PersonalGoodsViewModel: OnlyAuth #Отображать в меню "Любимые товары" OnlyAuth or Never
+  Localization:
+    Enable: True #Подключение локализации
+    ViewLocalization: True #Отображение стартового экрана с выбором языка при первом запуске приложения
 
 Development:
   <<: *Default

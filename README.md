@@ -69,7 +69,7 @@ MobileAppSample.Droid \ Properties \ AssemblyInfo.cs
 
 Если не удалось востановить NuGet пакеты, укажите источник NuGet вручную.
 ```sh
-https://nuget.loymax.net/nuget 
+https://repository.loymax.net/repository/nuget-ext/
 ```
 
 Mobile App Sample поддерживает App center, для подключение которого необходимо:
