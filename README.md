@@ -18,7 +18,7 @@
   <h3 align="center">Mobile App Sample</h3>
 
   <p align="center">
-    MobileAppSample – это стандартное приложение сгенерированное конструктором мобильных приложений компании Loymax.
+    MobileAppSample – это стандартное приложение, сгенерированное конструктором мобильных приложений компании Loymax.
     <br />
     <a href="https://github.com/loymax/mobile-app-sample"><strong>Explore the docs »</strong></a>
     <br />
@@ -47,7 +47,7 @@
 
 ![Product Name Screen Shot][product-screenshot-1]
  <p align="center">
-    MobileAppSample – мобильных приложений компании Loymax.
+    MobileAppSample – шаблонное мобильное приложение компании Loymax.
  </p>
 
 <!-- GETTING STARTED -->
@@ -67,7 +67,7 @@ MobileAppSample.Droid \ Properties \ AssemblyInfo.cs
 [assembly: MetaData("com.google.android.maps.v2.API_KEY", Value = "")] 
 ```
 
-Если не удалось востановить NuGet пакеты, укажите источник NuGet вручную.
+Если не удалось восстановить NuGet пакеты, укажите источник NuGet вручную.
 ```sh
 https://repository.loymax.net/repository/nuget-ext/
 ```
