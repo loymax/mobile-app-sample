@@ -31,7 +31,7 @@
   </p>
 </p>
 
-*Read this in other languages: [Russian](README.ru.md)*
+*Read this in other languages: [English](README.md)*
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -103,4 +103,4 @@ Distributed under the Apache 2.0 License. See `LICENSE` for more information.
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [license-shield]: https://img.shields.io/badge/License-Apache%202.0-blue.svg
 [license-url]: https://github.com/loymax/mobile-app-sample/blob/master/LICENSE
-[product-screenshot-1]: Images/screenshot_en.png
+[product-screenshot-1]: Images/screenshot_ru.png
