@@ -84,7 +84,7 @@ HockeyApp:
     Ios: "required"
 ```
 
-ПО Visual Studio 2019 Windows или Visual Studio for Mac 2019. 
+Visual Studio 2019 for Windows & Mac. 
 * Xamarin - 16.3.0.274
 * Xamarin.Android SDK - 10.0.0.43
 * Xamarin.iOS SDK - 13.2.0.42
