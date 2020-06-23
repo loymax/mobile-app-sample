@@ -120,12 +120,12 @@ Visual Studio 2019 for Windows & Mac.
   ```
 3. All side menu items are represented by a list of items _MenuCellElement_. To add a new element to the side menu, in the _Core.MenuViewModel_ class the _GetCurrentItems () _ method is to be overridden from the _BaseMenuViewModel_ parent class and add a new _MenuCellElement_.
         
-        3.1. Creating _MenuCellElement_ 
-        The _MenuCellElement_ class has many properties and methods. 
-        Consider the basic properties that are necessary to add to the side menu:
-        * ***Text*** – section title.
-        * ***ImageModel*** – the resource name represented by the string, the name must match on _Android_ and _iOS_. 
-        * ***Command*** – The command that will be called when clicking on the side menu item. A template method is usually placed in command. _ShowMenuItem_ with the _ViewModel_ type created in step 1. 
+  3.1. Creating _MenuCellElement_ 
+  The _MenuCellElement_ class has many properties and methods. 
+  Consider the basic properties that are necessary to add to the side menu:
+  * ***Text*** – section title.
+  * ***ImageModel*** – the resource name represented by the string, the name must match on _Android_ and _iOS_. 
+  * ***Command*** – The command that will be called when clicking on the side menu item. A template method is usually placed in command. _ShowMenuItem_ with the _ViewModel_ type created in step 1. 
 
   ###### Example:
   ```csharp
@@ -151,9 +151,9 @@ Visual Studio 2019 for Windows & Mac.
 ## Adding a new item to settings
 
 1. All items in the settings are represented by a list of items _CellElement_. To add a new item  it is necessary to do the following:
-   1.1. Create the _NewProfileViewModel_ class that is inherited from the _ProfileViewModel_
-   1.2. Override the _ReloadSettings()_ method
-   1.3. In the _ReloadSettings()_ method, add a new _CellElement_ in the _Items_ property
+   1. Create the _NewProfileViewModel_ class that is inherited from the _ProfileViewModel_
+   1. Override the _ReloadSettings()_ method
+   1. In the _ReloadSettings()_ method, add a new _CellElement_ in the _Items_ property
 Consider the _CellElement_ main properties are needed for a list of settings:
 
   * ***Text*** – section title.
