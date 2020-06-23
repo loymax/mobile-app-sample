@@ -149,9 +149,9 @@ Visual Studio 2019 for Windows & Mac.
 ## Adding a new item to settings
 
 1. All items in the settings are represented by a list of items _CellElement_. To add a new item  it is necessary to do the following:
-  1.1 Create the _NewProfileViewModel_ class that is inherited from the _ProfileViewModel_
-  1.2 Override the _ReloadSettings()_ method
-  1.3 In the _ReloadSettings()_ method, add a new _CellElement_ in the _Items_ property
+   1. Create the _NewProfileViewModel_ class that is inherited from the _ProfileViewModel_
+   1. Override the _ReloadSettings()_ method
+   1. In the _ReloadSettings()_ method, add a new _CellElement_ in the _Items_ property
 Consider the _CellElement_ main properties are needed for a list of settings:
 
   * ***Text*** – section title.

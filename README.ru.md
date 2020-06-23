@@ -150,9 +150,9 @@ Visual Studio 2019 for Windows & Mac.
 ## Adding a new item to settings
 
 1. Все элементы в настройках представлены списком элементов _CellElement_. Для добавление нового элемента необходимо:
-  1.1 Создать класс _NewProfileViewModel_ наследуясь от _ProfileViewModel_
-  1.2 Переопределим метод _ReloadSettings()_
-  1.3 В методе _ReloadSettings()_ добавляем новый _CellElement_ в свойство _Items_
+   1 Создать класс _NewProfileViewModel_ наследуясь от _ProfileViewModel_
+   1 Переопределим метод _ReloadSettings()_
+   1 В методе _ReloadSettings()_ добавляем новый _CellElement_ в свойство _Items_
 Рассмотрим основные свойства _CellElement_, которые необходимы для списка настроек:
 
   * ***Text*** – название раздела.
