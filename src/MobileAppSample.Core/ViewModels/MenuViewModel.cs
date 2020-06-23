@@ -42,7 +42,7 @@ namespace MobileAppSample.Core.ViewModels
         private MenuCellElement NewCellElement => new MenuCellElement
         {
             Text = Localize.GetText("NewViewModel.Title"),
-            ImageModel = "ic_menu_new",
+            ImageModel = "ic_new",
             Command = new MvxAsyncCommand(ShowMenuItem<NewViewModel>)
         };
         */

@@ -42,6 +42,10 @@
     <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
     <ConsolePause>false</ConsolePause>
     <AndroidSupportedAbis>arm64-v8a;armeabi-v7a;x86;x86_64</AndroidSupportedAbis>
+    <AndroidDexTool>d8</AndroidDexTool>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|AnyCPU' ">
     <Optimize>true</Optimize>
@@ -54,6 +58,10 @@
     <Debugger>Xamarin</Debugger>
     <DebugSymbols>False</DebugSymbols>
     <RunCodeAnalysis>True</RunCodeAnalysis>
+    <AndroidDexTool>d8</AndroidDexTool>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
@@ -66,6 +74,10 @@
     <Debugger>Xamarin</Debugger>
     <DebugSymbols>False</DebugSymbols>
     <RunCodeAnalysis>True</RunCodeAnalysis>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
+    <AndroidDexTool>d8</AndroidDexTool>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -948,6 +960,21 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_menu_language.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_new.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="../packages/Fody.3.0.3/build/Fody.targets" Condition="Exists('../packages/Fody.3.0.3/build/Fody.targets')" />
