@@ -39,7 +39,8 @@
 * [About the Project](#about-the-project)
 * [Getting Started](#getting-started)
   * [Installation](#installation)
-* [Добавления раздела в боковое меню](#Добавления раздела в боковое меню)
+* [Adding a section to the side menu](#adding-a-section-to-the-side-menu)
+* [Adding a new item to settings](#adding-a-new-item-to-settings)
 * [License](#license)
 * [Contact](#contact)
 
@@ -90,7 +91,7 @@ Visual Studio 2019 for Windows & Mac.
 * Xamarin.Android SDK - 10.0.0.43
 * Xamarin.iOS SDK - 13.2.0.42
 
-## Добавления раздела в боковое меню
+## Adding a section to the side menu
 1. Создать новую _ViewModel_ в _Core_, наследуется от _BaseViewModel_ или _MvxViewModel_
 2. Создать новые _View_
   2.1. **Android** - новые view могут быть представлены _activity_ или _fragment_.
@@ -102,7 +103,7 @@ Visual Studio 2019 for Windows & Mac.
   [MvxFragmentPresentation(typeof(MainMenuFragmentHostViewModel), FragmentHostViewModel.FragmentId)]
   public class NewFragment : BaseFragment<NewViewModel>
   {
-          protected override int FragmentId => Resource.Layout.new_view;
+        protected override int FragmentId => Resource.Layout.new_view;
   }
   ```
   2.2. **iOS** – добавить новый View Controller
@@ -127,22 +128,67 @@ Visual Studio 2019 for Windows & Mac.
   ```csharp
   var NewCellElement = new MenuCellElement
   {
-              Text = Localize.GetText("NewViewModel.Title"),
-              ImageModel = "ic_menu_new",
-              Command = new MvxAsyncCommand(ShowMenuItem<NewViewModel>)
+        Text = Localize.GetText("NewViewModel.Title"),
+        ImageModel = "ic_menu_new",
+        Command = new MvxAsyncCommand(ShowMenuItem<NewViewModel>)
   };
   ```
  
-3.2) Экземпляр класса _MenuCellElement_ добавляется в возвращаемый список метода _GetCurrentItems()_.
+  3.2. Экземпляр класса _MenuCellElement_ добавляется в возвращаемый список метода _GetCurrentItems()_.
   ###### Пример:
   ```csharp
   protected override IList<MenuCellElement> GetCurrentItems()
   {
-          var items = base.GetCurrentItems();
-          items?.Add(NewCellElement);
-          return items;
+        var items = base.GetCurrentItems();
+        items?.Add(NewCellElement);
+        return items;
   }
   ```
+    *.
+## Adding a new item to settings
+
+1. Все элементы в настройках представлены списком элементов _CellElement_. Для добавление нового элемента необходимо:
+
+  * Создать класс _NewProfileViewModel_ наследуясь от _ProfileViewModel_
+  *	Переопределим метод _ReloadSettings()_
+  *	В методе _ReloadSettings()_ добавляем новый _CellElement_ в свойство _Items_
+
+Рассмотрим основные свойства _CellElement_, которые необходимы для списка настроек: 
+  * ***Text*** – название раздела.
+  * ***ImageModel*** – названия ресурса, представленное строкой, название должно совпадать на **Android** и **iOS**. 
+  * ***Command*** – команда, которая будет вызвана при нажатии на элемент бокового меню.
+  * ***Type*** – тип ячейки.
+###### Пример:
+```csharp
+public class NewProfileViewModel : ProfileViewModel
+{
+    public NewProfileViewModel(ICurrentUserContext userContext, IUserProvider userProvider)
+        : base(userContext, userProvider) { }
+
+    protected override void ReloadSettings()
+    {
+        base.ReloadSettings();
+        var newItem = new CellElement {
+            Text = this["NewViewModel.Title"],
+            ImageModel = "ic_new",
+            Type = CellElementType.SingleCenterLine,
+            Command = new MvxAsyncCommand(() => NavigationService.Navigate<NewViewModel>())
+        };
+
+        Items.Add(newItem);
+    }
+}
+```
+
+2. В классе _CoreApp_ заменить текущую  _ViewModel_  _ProfileViewModel_  на новую  _NewProfileViewModel_ в методе _ReplaceViewModels_.
+###### Пример:
+```csharp
+protected override void ReplaceViewModels(IReplaceViewModelAdapter replaceViewModelAdapter)
+{
+    base.ReplaceViewModels(replaceViewModelAdapter);
+    replaceViewModelAdapter.Replace(typeof(ProfileViewModel), typeof(NewProfileViewModel));
+}
+```
 
 <!-- LICENSE -->
 ## License

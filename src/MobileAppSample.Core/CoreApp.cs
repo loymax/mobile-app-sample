@@ -20,7 +20,10 @@ namespace MobileAppSample.Core
     using Loymax.Core.Modules;
     using Loymax.Core.Settings;
     using Loymax.Core.Settings.Client;
+    using Loymax.Core.ViewModels.Locators;
     using Loymax.Core.ViewModels.Screens;
+    using Loymax.Module.Profile.ViewModels;
+    using MobileAppSample.Core.ViewModels;
     using MvvmCross;
 
     public class CoreApp : App
@@ -69,6 +72,12 @@ namespace MobileAppSample.Core
             moduleManager.EnsurePluginLoaded<Loymax.Module.Profile.ProfileModule>();
             moduleManager.EnsurePluginLoaded<Loymax.Module.SupportService.SupportServiceModule>();
             moduleManager.EnsurePluginLoaded<Loymax.Module.AboutApp.AboutAppModule>();
+        }
+
+        protected override void ReplaceViewModels(IReplaceViewModelAdapter replaceViewModelAdapter)
+        {
+            base.ReplaceViewModels(replaceViewModelAdapter);
+            //replaceViewModelAdapter.Replace(typeof(ProfileViewModel), typeof(NewProfileViewModel));
         }
     }
 }
