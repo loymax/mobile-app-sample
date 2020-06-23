@@ -39,6 +39,8 @@
 * [About the Project](#about-the-project)
 * [Getting Started](#getting-started)
   * [Installation](#installation)
+* [Adding a section to the side menu](#adding-a-section-to-the-side-menu)
+* [Adding a new item to settings](#adding-a-new-item-to-settings)
 * [License](#license)
 * [Contact](#contact)
 
@@ -88,6 +90,105 @@ Visual Studio 2019 for Windows & Mac.
 * Xamarin - 16.3.0.274
 * Xamarin.Android SDK - 10.0.0.43
 * Xamarin.iOS SDK - 13.2.0.42
+
+## Adding a section to the side menu
+1. Create a new _ViewModel_ in _Core_, it is inherited from _BaseViewModel_ or  _MvxViewModel_
+2. Create new _View_
+
+  2.1. **Android** - new view may be represented by _activity_ or  _fragment_.
+  In the side menu the _fragments_ only is used, but if desired, there the _Activity_ may be added. _Fragments_ is inherited from _BaseFragment_ or  _MvxFragment_. BaseFragment and _MvxFragment_ - template classes using the _VivewModel_ type created in the first step.
+  To link Fragment to Activity the _MvxFragmentPresentation_ attributes are used from _MvvmCross_. The host activity name for the _MainMenuFragmentHostViewModel_ menu. It also needs to specify the _ID_ for the fragment, and in the base class, the _FragmentID_ property is to be overridden. 
+
+  ###### Example:
+  ```csharp
+  [MvxFragmentPresentation(typeof(MainMenuFragmentHostViewModel), FragmentHostViewModel.FragmentId)]
+  public class NewFragment : BaseFragment<NewViewModel>
+  {
+          protected override int FragmentId => Resource.Layout.new_view;
+  }
+  ```
+  2.2. **iOS** – add a new View Controller
+  When creating a new View Controller, automatically created: 
+  ** .cs, .designer.cs и .Xib. ** 
+  New View Controller is inherited from _BaseViewController_ or  _MvxViewController_. _BaseViewController_ and _MvxViewController_ - template classes using the ViewModel type, created in the first step.
+
+  ###### Example:
+  ```csharp
+  [SidebarPresentation]
+  public partial class NewView : BaseViewController<NewViewModel> 
+  { }
+  ```
+3. All side menu items are represented by a list of items _MenuCellElement_. To add a new element to the side menu, in the _Core.MenuViewModel_ class the _GetCurrentItems () _ method is to be overridden from the _BaseMenuViewModel_ parent class and add a new _MenuCellElement_.
+  3.1. Creating _MenuCellElement_ 
+  The _MenuCellElement_ class has many properties and methods. 
+  Consider the basic properties that are necessary to add to the side menu:
+    * ***Text*** – section title.
+    * ***ImageModel*** – the resource name represented by the string, the name must match on _Android_ and _iOS_. 
+    * ***Command*** – The command that will be called when clicking on the side menu item. A template method is usually placed in command. _ShowMenuItem_ with the _ViewModel_ type created in step 1. 
+  ###### Example:
+  ```csharp
+  var NewCellElement = new MenuCellElement
+  {
+              Text = Localize.GetText("NewViewModel.Title"),
+              ImageModel = "ic_menu_new",
+              Command = new MvxAsyncCommand(ShowMenuItem<NewViewModel>)
+  };
+  ```
+ 
+3.2. An instance of the _MenuCellElement_ class is added to the returned list of the _GetCurrentItems()_ method.
+  ###### Example:
+  ```csharp
+  protected override IList<MenuCellElement> GetCurrentItems()
+  {
+          var items = base.GetCurrentItems();
+          items?.Add(NewCellElement);
+          return items;
+  }
+  ```
+
+## Adding a new item to settings
+
+1. All items in the settings are represented by a list of items _CellElement_. To add a new item  it is necessary to do the following:
+  1.1   Create the _NewProfileViewModel_ class that is inherited from the _ProfileViewModel_
+  1.2   Override the _ReloadSettings()_ method
+  1.3   In the _ReloadSettings()_ method, add a new _CellElement_ in the _Items_ property
+Consider the _CellElement_ main properties are needed for a list of settings:
+
+  * ***Text*** – section title.
+  * ***ImageModel*** – the resource name represented by the string, the name must match on **Android** and **iOS**. 
+  * ***Command*** – the command that will be called when clicking on the side menu item.
+  * ***Type*** – sell type.
+###### Example:
+```csharp
+public class NewProfileViewModel : ProfileViewModel
+{
+    public NewProfileViewModel(ICurrentUserContext userContext, IUserProvider userProvider)
+        : base(userContext, userProvider) { }
+
+    protected override void ReloadSettings()
+    {
+        base.ReloadSettings();
+        var newItem = new CellElement {
+            Text = this["NewViewModel.Title"],
+            ImageModel = "ic_new",
+            Type = CellElementType.SingleCenterLine,
+            Command = new MvxAsyncCommand(() => NavigationService.Navigate<NewViewModel>())
+        };
+
+        Items.Add(newItem);
+    }
+}
+```
+2. In the _CoreApp_ class, replace the current _ViewModel_  _ProfileViewModel_  with the new  _NewProfileViewModel_ in _ReplaceViewModels_ the.
+###### Example:
+```csharp
+protected override void ReplaceViewModels(IReplaceViewModelAdapter replaceViewModelAdapter)
+{
+    base.ReplaceViewModels(replaceViewModelAdapter);
+    replaceViewModelAdapter.Replace(typeof(ProfileViewModel), typeof(NewProfileViewModel));
+}
+```
+
 
 <!-- LICENSE -->
 ## License
