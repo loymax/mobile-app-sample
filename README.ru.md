@@ -144,16 +144,16 @@ Visual Studio 2019 for Windows & Mac.
         return items;
   }
   ```
-    *.
+
+
 ## Adding a new item to settings
 
 1. Все элементы в настройках представлены списком элементов _CellElement_. Для добавление нового элемента необходимо:
-
   * Создать класс _NewProfileViewModel_ наследуясь от _ProfileViewModel_
   *	Переопределим метод _ReloadSettings()_
   *	В методе _ReloadSettings()_ добавляем новый _CellElement_ в свойство _Items_
+Рассмотрим основные свойства _CellElement_, которые необходимы для списка настроек:
 
-Рассмотрим основные свойства _CellElement_, которые необходимы для списка настроек: 
   * ***Text*** – название раздела.
   * ***ImageModel*** – названия ресурса, представленное строкой, название должно совпадать на **Android** и **iOS**. 
   * ***Command*** – команда, которая будет вызвана при нажатии на элемент бокового меню.
@@ -179,7 +179,6 @@ public class NewProfileViewModel : ProfileViewModel
     }
 }
 ```
-
 2. В классе _CoreApp_ заменить текущую  _ViewModel_  _ProfileViewModel_  на новую  _NewProfileViewModel_ в методе _ReplaceViewModels_.
 ###### Пример:
 ```csharp
