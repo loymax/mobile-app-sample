@@ -94,6 +94,7 @@ Visual Studio 2019 for Windows & Mac.
 ## Adding a section to the side menu
 1. Создать новую _ViewModel_ в _Core_, наследуется от _BaseViewModel_ или _MvxViewModel_
 2. Создать новые _View_
+
   2.1. **Android** - новые view могут быть представлены _activity_ или _fragment_.
   В боковом меню используются только _fragments_, но при желании туда могут быть добавлены и _Activity_. _Fragments_ наследуется от _BaseFragment_ или _MvxFragment_. BaseFragment и _MvxFragment_ - шаблонные классы, использующие тип _VivewModel_ созданный на первом шаге.
   Для привязки Fragment к Activity используются атрибуты _MvxFragmentPresentation_ из _MvvmCross_. Имя host activity для меню _MainMenuFragmentHostViewModel_. Также необходимо указать _ID_ для фрагмента и в базовом классе необходимо переопределить свойство _FragmentID_. 
@@ -108,7 +109,7 @@ Visual Studio 2019 for Windows & Mac.
   ```
   2.2. **iOS** – добавить новый View Controller
   При создании нового View Controller автоматически создаются: 
-  ** .cs, .designer.cs и .Xib. ** 
+  _.cs, .designer.cs и .Xib_.
   Новый View Controller наследуется от _BaseViewController_ или _MvxViewController_. _BaseViewController_ и _MvxViewController_ - шаблонные классы, использующие тип ViewModel, созданный на первом шаге.
 
   ###### Пример:

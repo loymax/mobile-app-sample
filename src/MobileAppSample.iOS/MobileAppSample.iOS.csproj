@@ -773,6 +773,9 @@
     <ImageAsset Include="Assets.xcassets\ic_menu_language.imageset\ic_menu_language%402x.png" />
     <ImageAsset Include="Assets.xcassets\im_language.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\im_language.imageset\im_language.png" />
+    <ImageAsset Include="Assets.xcassets\ic_new.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_new.imageset\ic_new%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_new.imageset\ic_new%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\app_icon.imageset\" />
@@ -780,6 +783,7 @@
     <Folder Include="Assets.xcassets\ic_arrow_right.imageset\" />
     <Folder Include="Assets.xcassets\ic_menu_language.imageset\" />
     <Folder Include="Assets.xcassets\im_language.imageset\" />
+    <Folder Include="Assets.xcassets\ic_new.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MobileAppSample.Core\MobileAppSample.Core.csproj">
