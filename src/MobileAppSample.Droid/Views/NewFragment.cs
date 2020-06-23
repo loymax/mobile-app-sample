@@ -7,9 +7,7 @@ using MvvmCross.ViewModels;
 
 namespace MobileAppSample.Droid.Views
 {
-    [MvxViewFor(typeof(NewViewModel))]
     [MvxFragmentPresentation(typeof(MainMenuFragmentHostViewModel), FragmentHostViewModel.FragmentId)]
-    [Register(nameof(NewFragment))]
     public class NewFragment : BaseFragment<NewViewModel>
     {
         protected override int FragmentId => Resource.Layout.new_view;

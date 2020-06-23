@@ -44,8 +44,10 @@
   <ItemGroup>
     <None Remove="Configs\SideMenuOrder.yaml" />
     <None Remove="FodyWeavers.xml" />
+    <None Remove="Locales\en.yaml" />
     <None Remove="Locales\ru.yaml" />
     <EmbeddedResource Include="Configs\SideMenuOrder.yaml" />
+    <EmbeddedResource Include="Locales\en.yaml" />
     <EmbeddedResource Include="Locales\ru.yaml" />
     <None Remove="Configs\config.yaml" />
     <EmbeddedResource Include="Configs\config.yaml" />
