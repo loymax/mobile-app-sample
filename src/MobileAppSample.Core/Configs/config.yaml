@@ -1,6 +1,6 @@
 Configs: &Default
   Version: 2
-  AppName: MobileAppSample
+  AppName: Loymax Loyalty
   AgreementSettings:
     Content: offer.html
   ServerSettings:
@@ -8,20 +8,9 @@ Configs: &Default
     ForceDisableInputSocial: False
   Analytics:
     Google: 
-      Enable: false
-      TrackerId:
-        Android: 
-        Ios: 
-      Interval:
-        Android: 5
-        Ios: 5
+      Enable: true
   CachePolicyEnabled: False
-  CaptchaSettings:
-    BaseUrl: http://localhost
-    SiteKey:
-      Ios: "6LdxdXAUAAAAAP2s6x21Wr0CWfsYVDzddgHPxcHl"
-      Android: "6Lco4XAUAAAAAMm_wZt1953xjtB8dwz7a4-H_Wkt"
-  ResendCodeConfirmTime: 15 #Время ожидания для повторной отправки кода подтверждения (секунды)
+  ResendCodeConfirmTime: 60 #Время ожидания для повторной отправки кода подтверждения (секунды)
   AnonymVirtualCard: False #Виртуальная карта для анонима 
   ShowOptions:
     ProfileCardViewModel: OnlyAuth #Отображать в меню "Моя карта" All or OnlyAuth
@@ -44,11 +33,8 @@ Development:
       Android: False
       Ios: False
     EnableCrashManager: False
-    EnableUpdateManager: False
   PushNotification: 
     Enable: False
-    ProjectNumber:
-      Android: ""
 
 Staging:
   <<: *Default
@@ -63,11 +49,8 @@ Staging:
       Android: "required"
       Ios: "required"
     EnableCrashManager: True
-    EnableUpdateManager: True
   PushNotification: 
-    Enable: False
-    ProjectNumber:
-      Android: ""
+    Enable: True
 
 Production:
   <<: *Default
@@ -82,8 +65,5 @@ Production:
       Android: "required"
       Ios: "required"
     EnableCrashManager: True
-    EnableUpdateManager: False
   PushNotification: 
-    Enable: False
-    ProjectNumber:
-      Android: ""
+    Enable: True

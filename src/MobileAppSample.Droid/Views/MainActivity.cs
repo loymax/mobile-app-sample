@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2019, Loymax (https://loymax.ru)
+/* Copyright (c) 2011-2020, Loymax (https://loymax.ru)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -12,21 +12,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.*/
 
+using AndroidX.Fragment.App;
+
 namespace MobileAppSample.Droid.Views
 {
     using Android.App;
     using Android.Content.PM;
     using Android.OS;
-    using Android.Support.V4.Widget;
-    using Android.Support.V7.App;
     using Android.Views;
     using Android.Widget;
+    using AndroidX.AppCompat.App;
+    using AndroidX.DrawerLayout.Widget;
     using Loymax.Core.Droid.Extensions;
     using Loymax.Core.Droid.ViewModels;
     using Loymax.Core.Droid.Views;
     using MvvmCross.ViewModels;
-    using FragmentManager = Android.Support.V4.App.FragmentManager;
-    using SupportToolbar = global::Android.Support.V7.Widget.Toolbar;
+    using FragmentManager = FragmentManager;
+    using SupportToolbar = global::AndroidX.AppCompat.Widget.Toolbar;
 
     [MvxViewFor(typeof(MainMenuFragmentHostViewModel))]
     [Activity(Theme = "@style/AppTheme.Main"

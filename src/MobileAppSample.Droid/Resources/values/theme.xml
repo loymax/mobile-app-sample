@@ -15,6 +15,8 @@
     <style
         name  ="AppTheme.Splash"
         parent="AppTheme.Main">
+        <item 
+            name="android:windowBackground">@drawable/ic_splashscreen</item>
     </style>
     <!--  Override  -->
     <style
@@ -62,11 +64,18 @@
             name="lmx_background_color_offer_progress_bar">#dddddd</item>
         <item
             name="lmx_color_primary_dark">@color/colorPrimaryDark</item>
+        <item
+            name="lmx_color_border_checked">@color/colorPrimary</item>
+        <item
+            name="lmx_color_border_unchecked">#00000000</item>
+      
         <!--  Overrides  -->
         <item
             name="lmx_text_color_tabs_title">@color/colorWhiteAlfa_60</item>
         <item
             name="lmx_background_navigation_activated">@color/colorPrimaryAlfa_15</item>
+        <item
+            name="lmx_color_checkmark">@color/colorPrimary</item>
         <!--  Icons  -->
         <!--  Icons.Core  -->
         <!--<item
@@ -74,11 +83,11 @@
         <item
             name="lmx_im_placeholder">@drawable/lmx_background_placeholder</item>
         <item
-            name="lmx_ic_logo_large">@mipmap/ic_launcher</item>
+            name="lmx_ic_logo_large">@drawable/ic_logo</item>
         <item
-            name="lmx_ic_logo_normal">@mipmap/ic_launcher</item>
+            name="lmx_ic_logo_normal">@drawable/ic_logo</item>
         <item
-            name="lmx_ic_logo_small">@mipmap/ic_launcher</item>
+            name="lmx_ic_logo_small">@drawable/ic_logo</item>
         <item
             name="lmx_ic_action_arrow_detail">@drawable/ic_action_arrow_detail</item>
         <item
@@ -97,6 +106,8 @@
             name="lmx_ic_pin">@drawable/ic_merchants_pin</item>
         <item
             name="lmx_ic_action_phone">@drawable/ic_action_phone</item>
+        <item
+            name="lmx_ic_offers_drop_down_menu">@drawable/ic_drop_down_menu</item>
         <!--  Icons.Merchants  -->
         <item
             name="lmx_ic_merchants_pin">@drawable/ic_merchants_pin</item>
@@ -106,13 +117,19 @@
             name="lmx_ic_search">@drawable/ic_search_w</item>
         <!--  Icons.Offers  -->
         <item
-            name="lmx_ic_offers_map">@drawable/ic_map</item>
-        <item
+			      name="lmx_ic_offers_map">@drawable/ic_map</item>
+		    <item
+		        name="lmx_ic_qr_bar_code">@drawable/ic_card_lock</item>
+		    <item
             name="lmx_ic_offers_search">@drawable/ic_search</item>
-        <item
-            name="lmx_ic_offer_product_details">@drawable/ic_offer_product_details</item>
-        <item
+		    <item
             name="lmx_ic_offers_calendar">@drawable/ic_offers_calendar</item>
+		    <item
+            name="lmx_ic_offers_product_details">@drawable/ic_offer_product_details</item>
+		    <item
+            name="lmx_ic_offers_logo_card">@drawable/ic_logo</item>
+		    <item
+            name="lmx_ic_barcode">@drawable/ic_barcode</item>
         <!--  Icons.Profile  -->
         <item
             name="lmx_ic_action_plus_math">@drawable/ic_action_plus_math</item>
@@ -131,6 +148,8 @@
             name="lmx_ic_purchase_history_gift">@drawable/ic_purchase_history_gift</item>
         <item
             name="lmx_ic_purchase_history_pin">@drawable/ic_purchase_history_pin</item>
+		    <item
+		        name="lmx_ic_purchase_history_calendar">@drawable/ic_offers_calendar</item>
         <!--  Icons.ShoppingList  -->
         <item
             name="lmx_ic_basket_add">@drawable/ic_basket_add</item>
@@ -143,5 +162,6 @@
             name="lmx_ic_action_attention">@drawable/ic_action_attention</item>
         <item
             name="lmx_ic_action_sent">@drawable/ic_action_sent</item>
+      
     </style>
 </resources>

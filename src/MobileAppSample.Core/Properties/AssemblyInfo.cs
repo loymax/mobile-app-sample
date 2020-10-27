@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Loymax")]
 [assembly: AssemblyCompany("Loymax")]
 [assembly: AssemblyProduct("MobileAppSample.Core")]
-[assembly: AssemblyCopyright("Copyright © Loymax 2018")]
+[assembly: AssemblyCopyright("Copyright © Loymax 2020")]
 [assembly: AssemblyTrademark("Loymax")]
 [assembly: ComVisible(false)]
 

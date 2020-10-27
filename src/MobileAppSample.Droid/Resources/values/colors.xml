@@ -9,7 +9,7 @@
     <color
         name="colorPrimaryAlfa_15">#26323c7e</color>
     <color
-        name="colorSecondary">#00ffff</color>
+        name="colorSecondary">#00d9ff</color>
     <color
         name="colorGray">#AFAFAF</color>
     <color
@@ -78,7 +78,7 @@
         name="lmx_background_goods_banner">#F8C01A</color>
     <!--  Colors.ShoppingList-->
     <color
-        name="lmx_shopping_basket_background_circle">@color/colorPrimary</color>
+        name="lmx_shopping_basket_background_circle">@color/colorSecondary</color>
     <color
         name="lmx_shopping_basket_border_color">@color/colorGray</color>
     <color
@@ -92,4 +92,7 @@
         name="lmx_support_background_from_me_message">@color/colorWhite</color>
     <color
         name="lmx_support_border_from_me_message">@color/colorGray</color>
+
+    <color
+        name="ic_launcher_background">#0897F9</color>
 </resources>

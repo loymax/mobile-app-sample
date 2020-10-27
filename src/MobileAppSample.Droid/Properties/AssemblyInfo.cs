@@ -9,7 +9,7 @@ using Android.App;
 [assembly: AssemblyDescription("Loymax")]
 [assembly: AssemblyCompany("Loymax")]
 [assembly: AssemblyProduct("MobileAppSample.Droid")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
+[assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("Loymax")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
