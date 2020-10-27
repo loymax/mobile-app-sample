@@ -70,6 +70,16 @@ goodsViewLayerSelected() {
     corner-radius: 8;
     masks-to-bounds: false;
 }
+
+shadowBtnLayer() {
+    shadow-color: #000000;
+    shadow-offset: $(0,8);
+    shadow-radius: 8;
+    shadow-opacity: 0.24;
+    masks-to-bounds: false;
+    corner-radius: @primaryBorderRadius;
+}
+
 // colors
 
 Colors {
@@ -427,6 +437,24 @@ lmx_PurchaseHistoryTableViewCell_CardView {
 
 lmx_PurchaseHistoryTableViewCell_AddressIcon {
     image: ic_pin_map;
+}
+
+lmx_PurchaseHistoryView_FromButton {
+    image-normal: ic_calendar;
+    tint-color: @barButtonTintColor;
+    background-color: @tintColor;
+    layer: shadowBtnLayer();
+    font: $(system-Semibold@17);
+    image-edge-insets: $(0,0,0,50);
+}
+
+lmx_PurchaseHistoryView_ToButton {
+    image-normal: ic_calendar;
+    tint-color: @barButtonTintColor;
+    background-color: @tintColor;
+    layer: shadowBtnLayer();
+    font: $(system-Semibold@17);
+    image-edge-insets: $(0,0,0,50)
 }
 
 //localization
