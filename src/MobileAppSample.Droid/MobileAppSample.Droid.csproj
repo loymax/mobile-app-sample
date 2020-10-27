@@ -514,7 +514,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Clustering.Map">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Fody">
       <Version>3.0.3</Version>
@@ -522,49 +522,49 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="GoogleAnalytics">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Core">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.AboutApp">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.ClientSettings">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Coupons">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Merchants">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Notifications">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Offers">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Profile">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.PurchaseHistory">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.ResetPassword">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.ShoppingList">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.SignIn">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.SignUp">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.SupportService">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.PublicApi.SDK">
       <Version>2020.2.1.64228-Feature-46174</Version>
@@ -579,7 +579,7 @@
       <Version>2.0.3</Version>
     </PackageReference>
     <PackageReference Include="PDF.Viewer">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Realm">
       <Version>3.1.0</Version>
@@ -756,9 +756,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_code_bar.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <GoogleServicesJson Include="Properties\google-services.json" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\ic_barcode.png" />

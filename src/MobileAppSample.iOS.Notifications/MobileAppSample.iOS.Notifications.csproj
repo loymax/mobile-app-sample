@@ -104,7 +104,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignProvision>sample.notifications.adhoc</CodesignProvision>
   </PropertyGroup>
-   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhoneSimulator' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhoneSimulator' ">
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhoneSimulator\Ad-Hoc</OutputPath>
     <DefineConstants>
@@ -131,7 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="PushNotification.Service.iOS">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.PublicApi.SDK">
       <Version>2020.2.1.64228-Feature-46174</Version>

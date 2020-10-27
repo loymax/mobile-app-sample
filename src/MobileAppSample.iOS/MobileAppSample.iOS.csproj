@@ -882,12 +882,13 @@
     <ProjectReference Include="..\MobileAppSample.iOS.Notifications\MobileAppSample.iOS.Notifications.csproj">
       <Project>{B5423ED2-D381-47C2-A8BF-F133D5DE14DB}</Project>
       <Name>MobileAppSample.iOS.Notifications</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="style.less" />
     <Reference Include="OpenTK-1.0" />
-    <BundleResource Include="GoogleService-Info.plist" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs">
@@ -911,61 +912,61 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="GoogleAnalytics">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Ideine.ModernHttpClient">
       <Version>3.2.2</Version>
     </PackageReference>
     <PackageReference Include="JASidePanel.Navigation.iOS">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Core">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.AboutApp">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.ClientSettings">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Merchants">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Notifications">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Offers">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Offers.Abstractions">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Profile">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.PurchaseHistory">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.ResetPassword">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.ShoppingList">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.SignIn">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.SignUp">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.SupportService">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.PublicApi.SDK">
       <Version>2020.2.1.64228-Feature-46174</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Support.Style.iOS">
-      <Version>1.0.534-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Markdig">
       <Version>0.20.0</Version>

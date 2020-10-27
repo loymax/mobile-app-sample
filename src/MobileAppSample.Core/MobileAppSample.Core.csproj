@@ -59,21 +59,21 @@
     <EmbeddedResource Include="Configs\Offers.yaml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Loymax.Module.ClientSettings" Version="1.0.534-master" />
-    <PackageReference Include="Loymax.Module.Coupons" Version="1.0.534-master" />
-    <PackageReference Include="Loymax.Module.Merchants" Version="1.0.534-master" />
-    <PackageReference Include="Loymax.Module.Profile" Version="1.0.534-master" />
-    <PackageReference Include="Loymax.Module.ShoppingList" Version="1.0.534-master" />
-    <PackageReference Include="Loymax.Module.Notifications" Version="1.0.534-master" />
-    <PackageReference Include="Loymax.Module.PurchaseHistory" Version="1.0.534-master" />
-    <PackageReference Include="Loymax.Module.SignIn" Version="1.0.534-master" />
-    <PackageReference Include="Loymax.Module.SignUp" Version="1.0.534-master" />
-    <PackageReference Include="Loymax.Module.ResetPassword" Version="1.0.534-master" />
-    <PackageReference Include="Loymax.Core" Version="1.0.534-master" />
-    <PackageReference Include="Loymax.Module.AboutApp" Version="1.0.534-master" />
+    <PackageReference Include="Loymax.Module.ClientSettings" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.Coupons" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.Merchants" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.Profile" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.ShoppingList" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.Notifications" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.PurchaseHistory" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.SignIn" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.SignUp" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.ResetPassword" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Core" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.AboutApp" Version="1.0.539-master" />
     <PackageReference Include="Loymax.PublicApi.SDK" Version="2020.2.1.64228-Feature-46174" />
     <PackageReference Include="Markdig" Version="0.20.0" />
-    <PackageReference Include="Loymax.Module.SupportService" Version="1.0.534-master" />
-    <PackageReference Include="Loymax.Module.Offers" Version="1.0.534-master" />
+    <PackageReference Include="Loymax.Module.SupportService" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.Offers" Version="1.0.539-master" />
   </ItemGroup>
 </Project>
