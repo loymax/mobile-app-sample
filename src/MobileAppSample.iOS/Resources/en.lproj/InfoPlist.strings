@@ -1,0 +1,3 @@
+"NSCameraUsageDescription" = "Allow access to the camera to scan your card.";
+"NSPhotoLibraryUsageDescription" = "Allow access to the gallery to upload the image.";
+"NSLocationWhenInUseUsageDescription" = "Your current location will be displayed on the map and used to find the best offers.";

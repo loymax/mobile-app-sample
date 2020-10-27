@@ -32,11 +32,11 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Разрешите доступ к камере, что бы сканировать вашу карту.</string>
+	<string>Allow access to the camera to scan your card.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Разрешите доступ к галерее, что бы загрузить изображение.</string>
+	<string>Allow access to the gallery to upload the image.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Ваше текущее местоположение будет отображаться на карте и использоваться для поиска лучших предложений.</string>
+	<string>Your current location will be displayed on the map and used to find the best offers.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>ru</string>
 	<key>CFBundleName</key>

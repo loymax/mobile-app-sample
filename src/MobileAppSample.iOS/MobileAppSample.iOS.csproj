@@ -889,6 +889,8 @@
   <ItemGroup>
     <BundleResource Include="style.less" />
     <Reference Include="OpenTK-1.0" />
+    <BundleResource Include="Resources\ru.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs">
