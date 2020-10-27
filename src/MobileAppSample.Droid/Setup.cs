@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2019, Loymax (https://loymax.ru)
+/* Copyright (c) 2011-2020, Loymax (https://loymax.ru)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,12 +14,15 @@
 
 namespace MobileAppSample.Droid
 {
+    using GoogleAnalytics.Droid;
     using Loymax.Core;
     using Loymax.Core.Droid;
+    using Loymax.Core.Droid.Implements;
     using Loymax.Core.Modules;
     using Loymax.Core.Providers.Interfaces;
     using MobileAppSample.Core;
     using MvvmCross;
+    using MvvmCross.Logging;
     using System.Globalization;
 
     [Android.Runtime.Preserve(AllMembers = true)]
@@ -44,6 +47,18 @@ namespace MobileAppSample.Droid
             registry.Register<Loymax.Module.Profile.Droid.ProfileDroidModule>();
             registry.Register<Loymax.Module.SupportService.Droid.SupportServiceDroidModule>();
             registry.Register<Loymax.Module.AboutApp.Droid.AboutAppDroidModule>();
+#if !RELEASE
+            registry.Register<Loymax.Module.ClientSettings.Droid.ClientSettingsDroidModule>();
+#endif
+        }
+
+        protected override IMvxLogProvider CreateLogProvider()
+        {
+#if !RELEASE
+            return new LogProvider();
+#else
+            return base.CreateLogProvider();
+#endif
         }
 
         protected override CultureInfo CurrentCultureInfo()
@@ -52,6 +67,17 @@ namespace MobileAppSample.Droid
                 return localization.CurrentCultureInfo;
 
             return CultureInfo.CurrentCulture;
+        }
+
+        protected override void InitializeLastChance()
+        {
+            base.InitializeLastChance();
+
+            Mvx.IoCProvider.CallbackWhenRegistered<IAnalyticsProvider>(() =>
+            {
+                var provider = Mvx.IoCProvider.Resolve<IAnalyticsProvider>();
+                provider.RegisterListener<GoogleAnalyticsListener>();
+            });
         }
     }
 }

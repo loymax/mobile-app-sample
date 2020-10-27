@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2019, Loymax (https://loymax.ru)
+/* Copyright (c) 2011-2020, Loymax (https://loymax.ru)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@ namespace MobileAppSample.iOS
     using Foundation;
     using JASidePanel.Navigation.iOS;
     using Loymax.Core.iOS;
+    using UIKit;
 
     [Register(nameof(AppDelegate))]
     public class AppDelegate : BaseAppDelegate
@@ -24,6 +25,14 @@ namespace MobileAppSample.iOS
         public override BaseIosSetup MvxIosSetup()
         {
             return new Setup(this, new JASidebarViewPresenter(this, this.Window));
+        }
+
+        public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+        {
+#if !DEBUG
+            Firebase.Core.App.Configure();
+#endif
+            return base.FinishedLaunching(application, launchOptions);
         }
     }
 }

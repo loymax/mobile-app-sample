@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <AssetTargetFallback>$(AssetTargetFallback);portable45-net45+win8+wp8+wpa81;</AssetTargetFallback>
@@ -42,11 +42,13 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Configs\PurchaseHistory.yaml" />
     <None Remove="Configs\SideMenuOrder.yaml" />
     <None Remove="FodyWeavers.xml" />
     <None Remove="Locales\en.yaml" />
     <None Remove="Locales\ru.yaml" />
     <EmbeddedResource Include="Configs\SideMenuOrder.yaml" />
+    <EmbeddedResource Include="Configs\PurchaseHistory.yaml" />
     <EmbeddedResource Include="Locales\en.yaml" />
     <EmbeddedResource Include="Locales\ru.yaml" />
     <None Remove="Configs\config.yaml" />
@@ -57,20 +59,21 @@
     <EmbeddedResource Include="Configs\Offers.yaml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Loymax.Module.Coupons" Version="1.0.346-master" />
-    <PackageReference Include="Loymax.Module.Merchants" Version="1.0.346-master" />
-    <PackageReference Include="Loymax.Module.Offers" Version="1.0.346-master" />
-    <PackageReference Include="Loymax.Module.Profile" Version="1.0.346-master" />
-    <PackageReference Include="Loymax.Module.ShoppingList" Version="1.0.346-master" />
-    <PackageReference Include="Loymax.Module.Notifications" Version="1.0.346-master" />
-    <PackageReference Include="Loymax.Module.PurchaseHistory" Version="1.0.346-master" />
-    <PackageReference Include="Loymax.Module.SignIn" Version="1.0.346-master" />
-    <PackageReference Include="Loymax.Module.SignUp" Version="1.0.346-master" />
-    <PackageReference Include="Loymax.Module.ResetPassword" Version="1.0.346-master" />
-    <PackageReference Include="Loymax.Module.SupportService" Version="1.0.346-master" />
-    <PackageReference Include="Loymax.Core" Version="1.0.346-master" />
-    <PackageReference Include="Loymax.Module.AboutApp" Version="1.0.346-master" />
-    <PackageReference Include="Loymax.PublicApi.SDK" Version="2020.2.0.47361-master" />
-    <PackageReference Include="Markdig" Version="0.18.1" />
+    <PackageReference Include="Loymax.Module.ClientSettings" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.Coupons" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.Merchants" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.Profile" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.ShoppingList" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.Notifications" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.PurchaseHistory" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.SignIn" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.SignUp" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.ResetPassword" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Core" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.AboutApp" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.PublicApi.SDK" Version="2020.2.1.64228-Feature-46174" />
+    <PackageReference Include="Markdig" Version="0.20.0" />
+    <PackageReference Include="Loymax.Module.SupportService" Version="1.0.539-master" />
+    <PackageReference Include="Loymax.Module.Offers" Version="1.0.539-master" />
   </ItemGroup>
 </Project>

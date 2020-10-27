@@ -18,17 +18,19 @@
         app:MvxBind               ="Visibility InvertedVisibilityConverter(IsAuth)"
 		tools:background          ="#30ffff00">
 		<RelativeLayout
-			android:layout_above    ="@+id/menu_header_text_for_anonym"
-			android:layout_height   ="match_parent"
-			android:layout_width    ="match_parent"
-			android:gravity         ="center_vertical"
-			tools:background        ="#22ff0000">
+			android:layout_above      ="@+id/menu_header_text_for_anonym"
+			android:layout_height     ="match_parent"
+			android:layout_width      ="match_parent"
+			android:layout_marginLeft ="4dp"
+			android:layout_marginRight="96dp"
+			android:gravity           ="center_vertical"
+			tools:background          ="#22ff0000">
 			<ImageView
                 android:layout_marginTop   ="@dimen/activity_vertical_margin_half"
                 android:layout_marginBottom="@dimen/activity_vertical_margin_half"
 				android:layout_width       ="wrap_content"
 				android:layout_height      ="wrap_content"
-				app:MvxBind                ="ImageSource 'lmx_ic_logo_normal'"
+				android:src                ="@drawable/im_logo"
 				tools:src                  ="@tools:sample/avatars"/>
 		</RelativeLayout>
 		<LinearLayout
@@ -38,13 +40,6 @@
             android:layout_width            ="match_parent"
             android:layout_height           ="wrap_content"
 			android:layout_alignParentBottom="true">
-			<TextView
-				style                ="@style/Lmx.TextAppearance.Headline.H6"
-				android:layout_width ="wrap_content"
-				android:layout_height="wrap_content"
-				android:textColor    ="?attr/lmx_text_color_over_accent"
-				app:MvxBind          ="Text Settings.Environment.AppName" 
-				tools:text           ="Playground"/>
 			<TextView
 				style				 ="@style/Lmx.TextAppearance.Subtitle.S2"
 				android:layout_width ="wrap_content"

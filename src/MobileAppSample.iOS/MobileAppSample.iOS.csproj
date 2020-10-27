@@ -72,7 +72,7 @@
     <MtouchUseLlvm>true</MtouchUseLlvm>
     <IpaIncludeArtwork>false</IpaIncludeArtwork>
     <CodesignKey>iPhone Distribution</CodesignKey>
-    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <BuildIpa>true</BuildIpa>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -134,6 +134,7 @@
     <Compile Include="Views\NewView.designer.cs">
       <DependentUpon>NewView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\MenuHeaderView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -193,6 +194,9 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ItunesArtwork%402x.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\ic_lock.imageset\Contents.json">
@@ -280,9 +284,6 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\ic_basket_full.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\ic_phone.imageset\Contents.json">
@@ -445,21 +446,6 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\ic_action_cards_menegement_cell.imageset\ic_action_cards_menegement_cell%403x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-2436h%403x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-736h%403x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-667h%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Default-568h%402x.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\ic_delete.imageset\Contents.json">
@@ -726,12 +712,6 @@
     <ImageAsset Include="Assets.xcassets\ic_social_networks.imageset\ic_social_networks%402x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_sms.imageset\ic_sms%403x-1.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_sms.imageset\ic_sms%402x-1.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\ic_viber.imageset\ic_viber%403x.png">
       <Visible>false</Visible>
     </ImageAsset>
@@ -765,104 +745,272 @@
     <ImageAsset Include="Assets.xcassets\app_icon.imageset\ItunesArtwork%402x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_arrow_right.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_arrow_right.imageset\ic_arrow_right%403x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_arrow_right.imageset\ic_arrow_right%402x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_menu_language.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_menu_language.imageset\ic_menu_language%403x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_menu_language.imageset\ic_menu_language%402x.png" />
-    <ImageAsset Include="Assets.xcassets\im_language.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\im_language.imageset\im_language.png" />
-    <ImageAsset Include="Assets.xcassets\ic_new.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_new.imageset\ic_new%403x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_new.imageset\ic_new%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_arrow_right.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_arrow_right.imageset\ic_arrow_right%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_arrow_right.imageset\ic_arrow_right%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_menu_language.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_menu_language.imageset\ic_menu_language%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_menu_language.imageset\ic_menu_language%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\im_language.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\im_language.imageset\im_language.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_favorite_goods_checked.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_favorite_goods_checked.imageset\ic_favorite_goods_checked%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_favorite_goods_checked.imageset\ic_favorite_goods_checked%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_favorite_goods_locked.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_favorite_goods_locked.imageset\ic_favorite_goods_locked%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_favorite_goods_locked.imageset\ic_favorite_goods_locked%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_warning.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_warning.imageset\warning.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_attention.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_attention.imageset\ic_action_attention%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_attention.imageset\ic_action_attention%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_more.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_more.imageset\ic_action_more%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\filter-75.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\filter-50.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_filter.imageset\filter-25.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_close.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_close.imageset\close%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_close.imageset\close%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_sms.imageset\ic_sms%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_sms.imageset\ic_sms%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_referral_cell.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_referral_cell.imageset\ic_referral_cell%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_referral_cell.imageset\ic_referral_cell%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\im_logo_splash.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\im_logo_splash.imageset\im_logo.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_map.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_map.imageset\ic_map%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_map.imageset\ic_map%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\im_logo_menu_header.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\im_logo_menu_header.imageset\im_logo.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\app_icon.imageset\" />
-    <Folder Include="Resources\" />
     <Folder Include="Assets.xcassets\ic_arrow_right.imageset\" />
     <Folder Include="Assets.xcassets\ic_menu_language.imageset\" />
     <Folder Include="Assets.xcassets\im_language.imageset\" />
-    <Folder Include="Assets.xcassets\ic_new.imageset\" />
+    <Folder Include="Assets.xcassets\im_logo_menu_header.imageset\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MobileAppSample.Core\MobileAppSample.Core.csproj">
       <Project>{84C19B6A-9BE8-4201-9EB3-DF7CD1A0CEAC}</Project>
       <Name>MobileAppSample.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MobileAppSample.iOS.Notifications\MobileAppSample.iOS.Notifications.csproj">
+      <Project>{B5423ED2-D381-47C2-A8BF-F133D5DE14DB}</Project>
+      <Name>MobileAppSample.iOS.Notifications</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="style.less" />
     <Reference Include="OpenTK-1.0" />
+    <BundleResource Include="Resources\ru.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Clustering.Map">
-      <Version>1.0.346-master</Version>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.1.0.442</Version>
+    </PackageReference>
+    <PackageReference Include="BTProgressHUD">
+      <Version>1.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="com.loymax.sidepanel">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="com.microsoft.DZNEmptyDataSet">
+      <Version>1.7.3</Version>
+    </PackageReference>
+    <PackageReference Include="FluentValidation">
+      <Version>8.6.2</Version>
     </PackageReference>
     <PackageReference Include="Fody">
       <Version>3.0.3</Version>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="GoogleAnalytics">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
+    </PackageReference>
+    <PackageReference Include="Ideine.ModernHttpClient">
+      <Version>3.2.2</Version>
     </PackageReference>
     <PackageReference Include="JASidePanel.Navigation.iOS">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
+    </PackageReference>
+    <PackageReference Include="Loymax.Core">
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.AboutApp">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
-    <PackageReference Include="Loymax.Module.Coupons">
-      <Version>1.0.346-master</Version>
+    <PackageReference Include="Loymax.Module.ClientSettings">
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Merchants">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Notifications">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Offers">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
+    </PackageReference>
+    <PackageReference Include="Loymax.Module.Offers.Abstractions">
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.Profile">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.PurchaseHistory">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.ResetPassword">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.ShoppingList">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.SignIn">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.SignUp">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Module.SupportService">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
     </PackageReference>
     <PackageReference Include="Loymax.PublicApi.SDK">
-      <Version>2020.2.0.47361-master</Version>
+      <Version>2020.2.1.64228-Feature-46174</Version>
     </PackageReference>
     <PackageReference Include="Loymax.Support.Style.iOS">
-      <Version>1.0.346-master</Version>
+      <Version>1.0.539-master</Version>
+    </PackageReference>
+    <PackageReference Include="Markdig">
+      <Version>0.20.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter">
+      <Version>3.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>3.4.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Crashes">
-      <Version>2.1.1</Version>
+      <Version>3.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.Platforms">
+      <Version>1.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.File">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Json">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Location">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Messenger">
+      <Version>7.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.ResourceLoader">
+      <Version>7.0.0</Version>
     </PackageReference>
     <PackageReference Include="NETStandard.Library">
-      <Version>2.0.1</Version>
+      <Version>2.0.3</Version>
     </PackageReference>
-    <PackageReference Include="PDF.Viewer">
-      <Version>1.0.346-master</Version>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
     </PackageReference>
-    <PackageReference Include="PushNotification.Service.iOS">
-      <Version>1.0.346-master</Version>
+    <PackageReference Include="Polly">
+      <Version>7.2.0</Version>
     </PackageReference>
     <PackageReference Include="Realm">
       <Version>3.1.0</Version>
@@ -870,19 +1018,70 @@
     <PackageReference Include="Realm.Database">
       <Version>3.1.0</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Build.Download">
-      <Version>0.4.11</Version>
+    <PackageReference Include="Realm.DataBinding">
+      <Version>1.2.0</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Google.iOS.Analytics">
-      <Version>3.17.0.3</Version>
+    <PackageReference Include="Remotion.Linq">
+      <Version>2.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="SDWebImage.FLAnimatedImage">
+      <Version>4.0.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Collections.Immutable">
+      <Version>1.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations">
+      <Version>4.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Reflection.TypeExtensions">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Resources.ResourceManager">
+      <Version>4.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
+      <Version>4.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Connectivity">
+      <Version>3.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Settings">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Auth">
+      <Version>1.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Build.Download">
+      <Version>0.10.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>1.5.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.iOS.DynamicLinks">
+      <Version>4.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Yaml.Localization">
+      <Version>1.1.9</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Yaml.Parser">
+      <Version>1.1.9</Version>
+    </PackageReference>
+    <PackageReference Include="YamlDotNet">
+      <Version>8.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="ZXing.Net.Mobile">
+      <Version>2.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.iOS.Analytics">
+      <Version>6.4.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Views\NewView.xib" />
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Configs\Core.yaml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <Import Project="../packages/Fody.3.0.3/build/Fody.targets" Condition="Exists('../packages/Fody.3.0.3/build/Fody.targets')" />
-  <Import Project="../packages/NETStandard.Library.2.0.1/build/netstandard2.0/NETStandard.Library.targets" Condition="Exists('../packages/NETStandard.Library.2.0.1/build/netstandard2.0/NETStandard.Library.targets')" />
-  <Import Project="../packages/Realm.Database.3.1.0/build/Realm.Database.targets" Condition="Exists('../packages/Realm.Database.3.1.0/build/Realm.Database.targets')" />
-  <Import Project="../packages/Realm.3.1.0/build/Realm.targets" Condition="Exists('../packages/Realm.3.1.0/build/Realm.targets')" />
 </Project>

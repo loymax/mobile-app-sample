@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2019, Loymax (https://loymax.ru)
+/* Copyright (c) 2011-2020, Loymax (https://loymax.ru)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,21 +14,24 @@
 
 namespace MobileAppSample.iOS
 {
-    using System.Collections.Generic;
+    using GoogleAnalytics.iOS;
     using Loymax.Core;
     using Loymax.Core.iOS;
     using Loymax.Core.iOS.Extensions;
+    using Loymax.Core.iOS.Implements;
     using Loymax.Core.iOS.Style.Interfaces;
     using Loymax.Core.Modules;
+    using Loymax.Core.Providers.Interfaces;
     using Loymax.Support.Style.iOS.Managers;
     using Loymax.Support.Style.iOS.Settings;
-    using UIKit;
     using MobileAppSample.Core;
+    using MvvmCross;
+    using MvvmCross.Logging;
     using MvvmCross.Platforms.Ios.Core;
     using MvvmCross.Platforms.Ios.Presenters;
+    using System.Collections.Generic;
     using System.Globalization;
-    using Loymax.Core.Providers.Interfaces;
-    using MvvmCross;
+    using UIKit;
 
     public class Setup : BaseIosSetup
     {
@@ -79,6 +82,26 @@ namespace MobileAppSample.iOS
             return CultureInfo.CurrentCulture;
         }
 
+        protected override void InitializeLastChance()
+        {
+            base.InitializeLastChance();
+
+            Mvx.IoCProvider.CallbackWhenRegistered<IAnalyticsProvider>(() =>
+            {
+                var provider = Mvx.IoCProvider.Resolve<IAnalyticsProvider>();
+                provider.RegisterListener<GoogleAnalyticsListener>();
+            });
+        }
+
+        protected override IMvxLogProvider CreateLogProvider()
+        {
+#if !RELEASE
+            return new LogProvider();
+#else
+            return base.CreateLogProvider();
+#endif
+        }
+
         protected override void AddPlatformModules(ILxLoaderModuleRegistry registry)
         {
             base.AddPlatformModules(registry);
@@ -93,6 +116,9 @@ namespace MobileAppSample.iOS
             registry.Register<Loymax.Module.Profile.iOS.ProfileIosModule>();
             registry.Register<Loymax.Module.SupportService.iOS.SupportServiceIosModule>();
             registry.Register<Loymax.Module.AboutApp.iOS.AboutAppIosModule>();
+#if !RELEASE
+            registry.Register<Loymax.Module.ClientSettings.iOS.ClientSettingsIosModule>();
+#endif
         }
     }
 }

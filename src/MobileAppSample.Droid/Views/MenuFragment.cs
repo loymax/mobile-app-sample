@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2019, Loymax (https://loymax.ru)
+/* Copyright (c) 2011-2020, Loymax (https://loymax.ru)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,6 @@ namespace MobileAppSample.Droid.Views
 {
     using Android.OS;
     using Android.Runtime;
-    using Android.Support.Design.Widget;
     using Android.Views;
     using Loymax.Core.Droid.Custom.Adapters;
     using Loymax.Core.Droid.ViewModels;
@@ -25,6 +24,7 @@ namespace MobileAppSample.Droid.Views
     using MobileAppSample.Core.ViewModels;
     using MvvmCross.ViewModels;
     using MvvmCross.Platforms.Android.Presenters.Attributes;
+    using Google.Android.Material.Navigation;
 
     [MvxViewFor(typeof(MenuViewModel))]
     [MvxFragmentPresentation(typeof(MainMenuFragmentHostViewModel), Resource.Id.main_menuFragment)]

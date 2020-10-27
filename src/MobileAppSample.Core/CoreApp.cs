@@ -1,4 +1,4 @@
-/* Copyright (c) 2011-2019, Loymax (https://loymax.ru)
+/* Copyright (c) 2011-2020, Loymax (https://loymax.ru)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -72,6 +72,9 @@ namespace MobileAppSample.Core
             moduleManager.EnsurePluginLoaded<Loymax.Module.Profile.ProfileModule>();
             moduleManager.EnsurePluginLoaded<Loymax.Module.SupportService.SupportServiceModule>();
             moduleManager.EnsurePluginLoaded<Loymax.Module.AboutApp.AboutAppModule>();
+#if !RELEASE
+            moduleManager.EnsurePluginLoaded<Loymax.Module.ClientSettings.ClientSettingsModule>();
+#endif
         }
 
         protected override void ReplaceViewModels(IReplaceViewModelAdapter replaceViewModelAdapter)

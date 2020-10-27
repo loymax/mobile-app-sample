@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>MobileAppSample</string>
+	<string>Loymax Loyalty</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -32,22 +32,22 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Разрешите доступ к камере, что бы сканировать вашу карту.</string>
+	<string>Allow access to the camera to scan your card.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Разрешите доступ к галерее, что бы загрузить изображение.</string>
+	<string>Allow access to the gallery to upload the image.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Мы не передаем данные о Вашей локации третьим лицам и используем их для Вашего удобства</string>
+	<string>Your current location will be displayed on the map and used to find the best offers.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>ru</string>
 	<key>CFBundleName</key>
 	<string>MobileAppSample</string>
 	<key>CFBundleIdentifier</key>
-	<string>MobileAppSample.loymax.dev</string>
+	<string>com.loymax.sample</string>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>fetch</string>
+		<string>remote-notification</string>
 	</array>
-	<key>XSLaunchImageAssets</key>
-	<string>Assets.xcassets/LaunchImage.launchimage</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
 </dict>
 </plist>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="MobileAppSample.loymax.dev" android:versionCode="1" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
-	<application android:theme="@style/AppTheme.Main" android:usesCleartextTraffic="true" android:label="MobileAppSample" android:icon="@mipmap/ic_launcher">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="MobileAppSample.loymax.dev" android:versionCode="1" android:installLocation="auto" android:versionName="1.0.0" >
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
+	<application android:theme="@style/AppTheme.Main" android:usesCleartextTraffic="true" android:label="Loymax Loyalty" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round">
 		<uses-library android:name="org.apache.http.legacy" android:required="false" />
-		<provider android:name="android.support.v4.content.FileProvider" android:authorities="MobileAppSample.loymax.dev.fileprovider" android:exported="false" android:grantUriPermissions="true">
+		<provider android:name="androidx.core.content.FileProvider" android:authorities="MobileAppSample.loymax.dev.fileprovider" android:exported="false" android:grantUriPermissions="true">
 			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths" />
 		</provider>
 	</application>

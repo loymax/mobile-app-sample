@@ -45,6 +45,41 @@ btnViewLayerSelected() {
     border-width: 1;
     border-color: @tintColor;
 }
+
+goodsCardViewLayer() {
+    corner-radius: 8;
+    masks-to-bounds: true;
+    border-width: 0.5;
+    border-color: @tintColor;
+}
+
+goodsViewLayerDefault() {
+    shadow-color: #000000;
+    shadow-offset: $(1,1);
+    shadow-radius: 4;
+    shadow-opacity: 0.2;
+    corner-radius: 8;
+    masks-to-bounds: false;
+}
+
+goodsViewLayerSelected() {
+    shadow-color: @tintColor;
+    shadow-offset: $(1,1);
+    shadow-radius: 4;
+    shadow-opacity: 0.7;
+    corner-radius: 8;
+    masks-to-bounds: false;
+}
+
+shadowBtnLayer() {
+    shadow-color: #000000;
+    shadow-offset: $(0,8);
+    shadow-radius: 8;
+    shadow-opacity: 0.24;
+    masks-to-bounds: false;
+    corner-radius: @primaryBorderRadius;
+}
+
 // colors
 
 Colors {
@@ -113,21 +148,29 @@ lmx_LoyaltyCardView_HeaderImageView {
     image: im_logo;
 }
 
+UINavigationBar {
+    bar-tint-color: @tintColor;
+}
 // menu
 
 lmx_BaseMenuHeaderView_BrandLogo {
-    image: im_logo;
+    image: im_logo_menu_header;
     content-mode: scale-aspect-fit;
 }
 
 // offers
 
 lmx_OffersView_MerchantMapBarButtonItem {
-    image: ic_pin_map;
+    image: ic_map;
+    tint-color: #FFFFFF;
 }
 
 lmx_OffersTableViewCell_RewardContainerView {
     background-color: @accentColor;
+}
+
+lmx_OffersTableViewCell_DescriptionImageView {
+    image: ic_action_attention;
 }
 
 lmx_OfferDetailsView_MerchantMapBarButtonItem {
@@ -190,11 +233,43 @@ lmx_PersonalOffersDetailsTableViewCell_ArrowDownImageView {
 }
 
 lmx_OffersTableViewCell_ProgressBar {
-    track-tint-color: @tintColor;
+    progress-tint-color: @tintColor;
+    track-tint-color: #DDDDDD;
 }
 
 lmx_OffersTableViewCell_DateRangeImageView {
     image: ic_calendar;
+}
+
+lmx_OfferDetailsView_BrandsImageView {
+    image: ic_pin_map;
+}
+
+// offers goods
+
+lmx_GoodDetailCollectionViewCell {
+    layer: goodsViewLayerDefault();
+}
+
+lmx_GoodDetailCollectionViewCell_Selected {
+    layer: goodsViewLayerSelected();
+}
+
+lmx_GoodDetailCollectionViewCell_FavoriteGoodsLabel {
+    text-color: @tintColor;
+}
+
+lmx_GoodDetailCollectionViewCell_CardView {
+    layer: cardViewLayer();
+}
+
+lmx_GoodDetailCollectionViewCell_Selected_CardView {
+    layer: goodsCardViewLayer();
+}
+
+lmx_OffersView_DropDownMenuBarButtonItem {
+    image: ic_action_more;
+    tint-color: #FFFFFF;
 }
 
 // signin
@@ -286,7 +361,7 @@ lmx_SupportChatInputView_SendMessageButton {
 // shopping list
 
 basketCircleleLayer() {
-    corner-radius: 4;
+    corner-radius: 15;
     masks-to-bounds: true;
 }
 
@@ -301,6 +376,12 @@ lmx_BasketTableViewCell_OrangeCircleView {
 
 lmx_BasketDetailsTableViewCell_RemoveButton {
     image-normal: ic_delete;
+}
+
+lmx_BasketDetailsView_ClearListButton {
+    tint-color: @barButtonTintColor;
+    layer: shadowLayer();
+    sublayer-0: primaryLayer();
 }
 
 lmx_BasketTableViewCell {
@@ -358,7 +439,26 @@ lmx_PurchaseHistoryTableViewCell_AddressIcon {
     image: ic_pin_map;
 }
 
+lmx_PurchaseHistoryView_FromButton {
+    image-normal: ic_calendar;
+    tint-color: @barButtonTintColor;
+    background-color: @tintColor;
+    layer: shadowBtnLayer();
+    font: $(system-Semibold@17);
+    image-edge-insets: $(0,0,0,50);
+}
+
+lmx_PurchaseHistoryView_ToButton {
+    image-normal: ic_calendar;
+    tint-color: @barButtonTintColor;
+    background-color: @tintColor;
+    layer: shadowBtnLayer();
+    font: $(system-Semibold@17);
+    image-edge-insets: $(0,0,0,50)
+}
+
 //localization
+
 lmx_LocalizationViewCell_LanguageButton {
     layer: btnViewLayer();
     background-color: @barButtonTintColor;
@@ -367,4 +467,16 @@ lmx_LocalizationViewCell_LanguageButton {
 lmx_LocalizationViewCell_Selected_LanguageButton {
     layer: btnViewLayerSelected();
     background-color: @tintColor;
+}
+
+//merchant
+
+lmx_MerchantsView_MerchantFilterItem {
+    image: ic_filter;
+    tint-color: #FFFFFF;
+}
+
+lmx_PopupView_DoneButton {
+    image: ic_close;
+    tint-color: #FFFFFF;
 }
