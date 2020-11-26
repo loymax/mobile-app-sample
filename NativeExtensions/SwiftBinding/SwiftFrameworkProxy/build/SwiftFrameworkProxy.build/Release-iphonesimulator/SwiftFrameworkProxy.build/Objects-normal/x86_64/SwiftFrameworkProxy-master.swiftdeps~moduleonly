@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)"
+options: "255b476dd30a5bc7ac607a74dbeb56ed"
+build_time: [1606115184, 743285000]
+inputs:
+  "/Users/admin/Documents/SwiftFrameworkProxy/SwiftFrameworkProxy/SwiftFrameworkProxy/SwiftFrameworkProxy.swift": [9223372036, 854775807]
+  "/Users/admin/Documents/SwiftFrameworkProxy/SwiftFrameworkProxy/SwiftFrameworkProxy/NewModel.swift": [9223372036, 854775807]
+  "/Users/admin/Documents/SwiftFrameworkProxy/SwiftFrameworkProxy/SwiftFrameworkProxy/NewViewController.swift": [9223372036, 854775807]

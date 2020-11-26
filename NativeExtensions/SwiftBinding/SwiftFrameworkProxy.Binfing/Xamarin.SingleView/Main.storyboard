@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zR1-yj-I2f">
+                                <rect key="frame" x="36" y="436" width="342" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.39001590009999998" green="0.37905865909999997" blue="0.39206439259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnP-fe-Ea3">
+                                <rect key="frame" x="50" y="750" width="314" height="42"/>
+                                <color key="backgroundColor" red="0.85363513229999999" green="0.70117431880000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="T5w-v8-rNj"/>
+                                </constraints>
+                                <color key="tintColor" red="0.39001590009999998" green="0.37905865909999997" blue="0.39206439259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vMF-gq-CC3"/>
+                        <color key="backgroundColor" red="0.73788803820000004" green="0.69551569219999998" blue="0.67117065190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zR1-yj-I2f" firstAttribute="centerX" secondItem="vMF-gq-CC3" secondAttribute="centerX" id="3yT-P2-yOr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EnP-fe-Ea3" secondAttribute="trailing" constant="30" id="74m-Wy-Mlg"/>
+                            <constraint firstItem="zR1-yj-I2f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="JNf-vQ-xcc"/>
+                            <constraint firstItem="zR1-yj-I2f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fcS-J2-qsW"/>
+                            <constraint firstItem="EnP-fe-Ea3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="pmB-ER-iKd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zR1-yj-I2f" secondAttribute="trailing" constant="16" id="upO-ji-CSX"/>
+                            <constraint firstItem="vMF-gq-CC3" firstAttribute="bottom" secondItem="EnP-fe-Ea3" secondAttribute="bottom" constant="70" id="zCg-fi-FbS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="HelloWorldLabel" destination="zR1-yj-I2f" id="name-outlet-zR1-yj-I2f"/>
+                        <outlet property="NextButton" destination="EnP-fe-Ea3" id="name-outlet-EnP-fe-Ea3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/admin/Documents/SwiftFrameworkProxy/SwiftFrameworkProxy/build/Release-iphonesimulator/SwiftFrameworkProxy.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/admin/Documents/SwiftFrameworkProxy/SwiftFrameworkProxy/build/SwiftFrameworkProxy.build/Release-iphonesimulator/SwiftFrameworkProxy.build/unextended-module.modulemap",
+    }]
+  }]
+}

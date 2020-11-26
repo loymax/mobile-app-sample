@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{919E3C71-73C7-4797-BFB9-1C2339699768}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Xamarin.SingleView/Info.plist">
+    <Files>
+      <File FileName="Xamarin.SingleView/ViewController.cs" Line="12" Column="10" IsPinned="True" />
+      <File FileName="SwiftFrameworkProxy.Binfing/ApiDefinition.cs" Line="5" Column="2" />
+      <File FileName="SwiftFrameworkProxy.Binfing/Structs.cs" />
+      <File FileName="Xamarin.SingleView/AppDelegate.cs" Line="20" Column="1" />
+      <File FileName="Xamarin.SingleView/ViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="Xamarin.SingleView/Info.plist" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SwiftFrameworkProxy.Binfing" expanded="True">
+            <Node name="SwiftFrameworkProxy.Binfing" expanded="True">
+              <Node name="NativeReferenceFolder" expanded="True" />
+            </Node>
+            <Node name="Xamarin.SingleView" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="LaunchScreen.storyboard" selected="True" />
+              <Node name="ViewController.cs" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Xamarin.SingleView PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.59701CB1-E7DF-4B0C-BAC3-D687347BC056" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

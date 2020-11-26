@@ -1,0 +1,14 @@
+https://docs.microsoft.com/ru-ru/xamarin/ios/platform/binding-swift/walkthrough#build-a-native-library
+
+xcodebuild -sdk iphonesimulator14.2 -project "SwiftFrameworkProxy.xcodeproj" -configuration Release
+xcodebuild -sdk iphoneos14.2 -project "SwiftFrameworkProxy.xcodeproj" -configuration Release
+
+cd build
+
+cp -R "Release-iphoneos" "Release-fat"
+cp -R "Release-iphonesimulator/SwiftFrameworkProxy.framework/Modules/SwiftFrameworkProxy.swiftmodule/" "Release-fat/SwiftFrameworkProxy.framework/Modules/SwiftFrameworkProxy.swiftmodule/"
+lipo -create -output "Release-fat/SwiftFrameworkProxy.framework/SwiftFrameworkProxy" "Release-iphoneos/SwiftFrameworkProxy.framework/SwiftFrameworkProxy" "Release-iphonesimulator/SwiftFrameworkProxy.framework/SwiftFrameworkProxy"
+
+lipo -info "Release-fat/SwiftFrameworkProxy.framework/SwiftFrameworkProxy" - проверка Architectures in the fat file: Release-fat/SwiftFrameworkProxy.framework/SwiftFrameworkProxy are: armv7 x86_64 arm64 
+
+sharpie bind --sdk=iphoneos14.2 --output="XamarinApiDef" --namespace="Binding" --scope="Release-fat/SwiftFrameworkProxy.framework/Headers/" "Release-fat/SwiftFrameworkProxy.framework/Headers/SwiftFrameworkProxy-Swift.h"
