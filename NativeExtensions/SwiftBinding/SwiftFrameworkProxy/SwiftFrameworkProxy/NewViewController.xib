@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewViewController" customModule="SwiftFrameworkProxy" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="VtC-1z-OpW" id="ZLC-wy-FrX"/>
+                <outlet property="titleLabel" destination="xUz-Ke-pxi" id="CpI-8i-OMt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUz-Ke-pxi">
+                    <rect key="frame" x="16" y="70" width="382" height="698"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.73788803820000004" green="0.69551569219999998" blue="0.67117065190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtC-1z-OpW">
+                    <rect key="frame" x="30" y="784" width="354" height="42"/>
+                    <color key="backgroundColor" red="0.85363513229999999" green="0.70117431880000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="pIe-ge-7lf"/>
+                    </constraints>
+                    <color key="tintColor" red="0.39001590009999998" green="0.37905865909999997" blue="0.39206439259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Close"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.1351405084" green="0.15293371680000001" blue="0.19376936550000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VtC-1z-OpW" secondAttribute="trailing" constant="30" id="8tX-aC-5YG"/>
+                <constraint firstItem="xUz-Ke-pxi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="BFN-h4-Rhy"/>
+                <constraint firstItem="xUz-Ke-pxi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="F2q-jg-5KP"/>
+                <constraint firstItem="VtC-1z-OpW" firstAttribute="top" secondItem="xUz-Ke-pxi" secondAttribute="bottom" constant="16" id="Lqu-zq-jEh"/>
+                <constraint firstAttribute="trailing" secondItem="xUz-Ke-pxi" secondAttribute="trailing" constant="16" id="a4D-vX-IeS"/>
+                <constraint firstItem="VtC-1z-OpW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="dQ9-KH-igV"/>
+                <constraint firstAttribute="bottom" secondItem="VtC-1z-OpW" secondAttribute="bottom" constant="70" id="j3s-gh-Xb5"/>
+            </constraints>
+            <point key="canvasLocation" x="135" y="133"/>
+        </view>
+    </objects>
+</document>
